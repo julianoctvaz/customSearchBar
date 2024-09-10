@@ -37,6 +37,25 @@ struct ContentView: View {
         }
         .padding()
     }
+
+    private var customSearchBar: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+            TextField("Procure por belos nomes", text: $searchText)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding(.horizontal)
+            
+            //coloca botao de clear
+            if !searchText.isEmpty {
+                Button(action: {
+                    searchText = ""
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.red)
+                }
+            }
+        }
+    }
 }
 
 #Preview {
