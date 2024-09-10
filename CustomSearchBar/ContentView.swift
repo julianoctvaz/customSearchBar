@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  CustomSearchBar
 //
-//  Created by Juliano on 09/09/24.
+//  Created by Juliano Cezar Teles Vaz on 09/09/24.
 //
 
 import SwiftUI
