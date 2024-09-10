@@ -30,10 +30,16 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List {
+                ForEach(filteredNames, id: \.self) { name in
+                    Text(name)
+                }
+            }
+            Spacer() // Forçando para colocar a searchbar na base
+            customSearchBar
+                .padding()
+                .background(Color(.systemBackground))
+                .shadow(radius: 2)
         }
         .padding()
     }
